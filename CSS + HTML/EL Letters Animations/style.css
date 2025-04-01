@@ -1,0 +1,161 @@
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
+body {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    font-family: sans-serif;
+    background-color: #ddd;
+}
+
+:root {
+    --mainColor: #323234;
+    --AnimationColor: #FEA604;
+}
+
+.E{
+    display: grid;
+    grid-template-columns: repeat(4,1fr);
+    grid-template-rows: repeat(7,1fr);
+    width: 300px;
+    height: 500px;
+    padding: 10px;
+    position: relative;
+}
+
+.container{
+    display: grid;
+    gap: 20px;
+    grid-template-columns: 1fr 1fr;
+    background: #eee;
+    width: 620px;
+    height: 500px;
+    
+}
+
+.container .one,
+.container .two,
+.container .three,
+.container .four
+{
+    background-color: var(--mainColor);
+}
+
+ .one{
+    height: 100%;
+    width: 75px;
+    grid-area: 1/1/8/2;
+}
+
+.E .two{
+    height: 75px;
+    width: 100%;
+    grid-area: 1/2/2/5;
+}
+
+.E .three{
+    height: 75px;
+    width: 100%;
+    grid-area: 4/2/5/5;
+}
+
+.E .four{
+    height: 75px;
+    width: 100%;
+    grid-area: 7/2/8/5;
+}
+
+.firstbox{
+    position: absolute;
+    background: var(--AnimationColor);
+    width:50px;
+    height: 50px;
+    right: 20px;
+    top: 22px;
+    
+    animation:firstBoxAnimation 3s linear 3s ;
+}
+
+@keyframes firstBoxAnimation{
+    10%{
+        transform: translateX(-210px);
+    }
+    20%{
+        transform: translate(-210px,200px);
+        
+    }
+    30%{
+        transform: translate(0px,200px);
+        
+    }
+    40%{
+        
+        transform: translate(-210px,200px);
+    }
+    50%{
+        transform: translate(-210px,400px);
+        
+    }
+    60%{
+        transform: translate(0px,400px);
+
+    }
+    70%{
+        transform: translate(-210px,400px);
+    }
+    90%{
+        transform: translate(-210px,0px);
+    }
+    100%{
+        transform: translate(0);
+    }
+}
+
+.L{
+    display: grid;
+    grid-template-columns: repeat(4,1fr);
+    grid-template-rows: repeat(7,1fr);
+    width: 300px;
+    height: 500px;
+    padding: 10px;
+    position: relative;
+}
+
+.L .two{
+    height: 75px;
+    width: 100%;
+    grid-area: 7/2/8/5;
+}
+
+.secbox{
+    position: absolute;
+    background: var(--AnimationColor);
+    width:50px;
+    height: 50px;
+    right: 20px;
+    bottom: 22px;
+
+    animation:secondBoxAnimation 3s linear ;
+}
+
+
+@keyframes secondBoxAnimation{
+    25%{
+        transform: translateX(-210px);
+        opacity: 1;
+    }
+    75%{
+        transform: translate(-210px, -400px);
+        opacity: 1;
+    }
+    
+    100%{
+        transform: translate(-210px, -400px);
+        opacity: 0;
+    }
+}
