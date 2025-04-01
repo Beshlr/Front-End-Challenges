@@ -6,115 +6,99 @@ body {
 
 *{
     font-family: sans-serif;
+        
 }
-.content {
-    
 
+
+.content{
     display: grid;
-    grid-template-columns: repeat(4, 1fr);
-    grid-template-rows: repeat(4, 1fr);
-    width: 100%;
-    height: 100%;
-    grid-template-areas: 
-        "osama osama ahmed shady"
-        "mohamed-ibrahim mahmoud mahmoud shady"
-        "mohamed-ibrahim ezz ezz shady"
-       "mohamed-sayed ibrahim gamal eman";
     background: #eee;
-    padding: 20px;
+    grid-template-columns: repeat(4,300px);
+    grid-template-rows: repeat(3,400px) 250px;
+    grid-template-areas: "osama_mohamed osama_mohamed ahmed_sayed shady_nabil"
+                         "mohamed_ibrahim mahmoud_mohamed mahmoud_mohamed shady_nabil"
+                         "mohamed_ibrahim ezz_eldin ezz_eldin shady_nabil"
+                         "mohamed_sayed ibrahim_sayed gamal_sayed eman_sayed";
     gap: 10px;
+    padding: 50px;
+    position: relative;
 }
 
-/* Updated class names to match new grid-area names */
-.osama-mohamed {
-    grid-area: osama;
-    background: white;
-    color:black;
-}
-.ahmed-sayed {
-    grid-area: ahmed;
-    background: white;
-    color:black;
-}
-.shady-nabil {
-    grid-area: shady;
-}
-.mohamed-ibrahim {
-    grid-area: mohamed-ibrahim;
-    background: white;
-    color:black;
-}
-.mahmoud-mohamed {
-    grid-area: mahmoud;
-}
-.ezz-eldin {
-    grid-area: ezz;
-    background: white;
-    color:black;
-}
-.mohamed-sayed {
-    grid-area: mohamed-sayed;
-    background: white;
-    color:black;
-}
-.ibrahim-sayed {
-    grid-area: ibrahim;
-}
-.gamal-sayed {
-    grid-area: gamal;
-    background: white;
-    color:black;
-}
-.eman-sayed {
-    grid-area: eman;
-    background: white;
-    color:black;
-}
-
-.content div {
-    display: grid;
-    
+.osama-mohamed,
+.ahmed-sayed,
+.mohamed-ibrahim,
+.ezz-eldin,
+.mohamed-sayed,
+.gamal-sayed,
+.eman-sayed
+{
     padding: 10px;
-    border-bottom: 3px solid red;
-     position: relative; /*Added for pseudo-element */
+    background-color: white;
+    border-bottom: 5px solid red;
+    position: relative;
 }
 
-.content div::after {
+.name{
+    position: absolute;
+    font-weight: bold;
+    top: 0;
+}
+
+.title{
+    color: gray;
+    font-weight: bold;
+    position: absolute;
+    padding: 15px 0;
+    top: 10px;
+}
+
+.content div::after{
     content: url(../Images/352392_format_quote_icon.png);
     position: absolute;
-    bottom: -3px;
+    bottom: 0;
     right: 5px;
-    
 }
 
-.name {
-    font-size: 18px;
-    font-weight: bold;
-    position: absolute;
-    top: 7px;
-    left: 8px;
-    margin: 0;
+.description{
+    padding-top: 40px;
 }
 
-.title {
-    font-size: 14px;
-    font-weight: bold;
-    position: absolute;
-    top: 30px;
-    left: 14px;
-    margin: 0;
-    color: gray;
-}
-
-.description {
-    font-weight: bold;
-    /* position: absolute;
-    top: 5px; */
-}
-
-/* Colored sections */
-.shady-nabil, .mahmoud-mohamed, .ibrahim-sayed {
-    background: black;
+.shady-nabil, .mahmoud-mohamed, .ibrahim-sayed{
+    background-color: black;
     color: white;
+    padding: 10px;
+    border-bottom: 5px solid red;
+    position: relative;
 }
 
+.osama-mohamed{
+    grid-area:osama_mohamed;
+}
+
+.ahmed-sayed{
+    grid-area:ahmed_sayed;
+}
+.shady-nabil{
+    grid-area:shady_nabil;
+}
+.mohamed-ibrahim{
+    grid-area:mohamed_ibrahim;
+}
+.ezz-eldin{
+    grid-area:ezz_eldin;
+}
+.mahmoud-mohamed{
+    grid-area:mahmoud_mohamed;
+}
+.mohamed-sayed{
+    grid-area:mohamed_sayed;
+}
+.ibrahim-sayed{
+    grid-area:ibrahim_sayed;
+}
+.gamal-sayed{
+    grid-area:gamal_sayed;
+}
+.eman-sayed{
+    grid-area:eman_sayed;
+}
